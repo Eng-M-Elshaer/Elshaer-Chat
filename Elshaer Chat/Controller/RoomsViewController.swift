@@ -43,7 +43,7 @@ class RoomsViewController: UIViewController,UITableViewDataSource,UITableViewDel
     }
     
     func lOut(){
-        let LoginSreen = self.storyboard?.instantiateViewController(withIdentifier: "LoginSreen") as! ViewController
+        let LoginSreen = self.storyboard?.instantiateViewController(withIdentifier: "LoginSreen") as! MainVC
         self.present(LoginSreen,animated: true,completion: nil)
     }
     

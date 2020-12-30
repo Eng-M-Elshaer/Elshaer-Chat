@@ -9,8 +9,8 @@
 import UIKit
 
 struct Message {
-    var messageID:String?
-    var senderName:String?
-    var textMessage:String?
-    var senderID:String?
+    var messageID: String?
+    var senderName: String?
+    var textMessage: String?
+    var senderID: String?
 }

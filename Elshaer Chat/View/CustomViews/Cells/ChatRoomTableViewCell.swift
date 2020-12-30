@@ -8,13 +8,14 @@
 
 import UIKit
 
+enum messageType {
+    case incoming
+    case outgoing
+}
+
 class ChatRoomTableViewCell: UITableViewCell {
     
-    enum messageType {
-        case incoming
-        case outgoing
-    }
-
+    //MARK:- Outlet
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var stackView: UIStackView!
@@ -25,30 +26,24 @@ class ChatRoomTableViewCell: UITableViewCell {
         continer.layer.cornerRadius = 10
     }
     
-    func setMessageData(message:Message){
-        
-        userName.text = message.senderName
-        textView.text = message.textMessage
-        
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
     }
     
-    func setTextViewType(type:messageType){
+    //MARK:- Public Method
+    func setMessageData(message: Message){
+        userName.text = message.senderName
+        textView.text = message.textMessage
+    }
+    func setTextViewType(type: messageType){
         if type == .incoming {
             stackView.alignment = .leading
             continer.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
             textView.textColor = .black
-            
         } else if type == .outgoing {
             stackView.alignment = .trailing
             continer.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
             textView.textColor = .white
         }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }
