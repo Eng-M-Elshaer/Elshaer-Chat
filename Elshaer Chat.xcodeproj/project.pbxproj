@@ -13,13 +13,14 @@
 		6410C231224E3F4E00D7B6CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6410C22F224E3F4E00D7B6CF /* Main.storyboard */; };
 		6410C233224E3F5000D7B6CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6410C232224E3F5000D7B6CF /* Assets.xcassets */; };
 		6410C236224E3F5000D7B6CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6410C234224E3F5000D7B6CF /* LaunchScreen.storyboard */; };
-		6410C23E224E477F00D7B6CF /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6410C23D224E477F00D7B6CF /* CollectionViewCell.swift */; };
-		6453375C2257748F0082CAFF /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6453375B2257748F0082CAFF /* ChatRoomViewController.swift */; };
+		6410C23E224E477F00D7B6CF /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6410C23D224E477F00D7B6CF /* MainCollectionViewCell.swift */; };
+		6453375C2257748F0082CAFF /* ChatRoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6453375B2257748F0082CAFF /* ChatRoomVC.swift */; };
 		6453375E2257959B0082CAFF /* ChatRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6453375D2257959B0082CAFF /* ChatRoomTableViewCell.swift */; };
 		6453376022579A1B0082CAFF /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6453375F22579A1B0082CAFF /* Message.swift */; };
 		64BD0A3B224E530800A5F00A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64BD0A3A224E530800A5F00A /* GoogleService-Info.plist */; };
-		64BD0A3D224E6CD900A5F00A /* RoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BD0A3C224E6CD900A5F00A /* RoomsViewController.swift */; };
+		64BD0A3D224E6CD900A5F00A /* RoomsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BD0A3C224E6CD900A5F00A /* RoomsVC.swift */; };
 		64BD0A40224E86F400A5F00A /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BD0A3F224E86F400A5F00A /* Room.swift */; };
+		E23C2EC2259C92C3003AD49B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23C2EC1259C92C3003AD49B /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,14 +33,15 @@
 		6410C232224E3F5000D7B6CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6410C235224E3F5000D7B6CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6410C237224E3F5000D7B6CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6410C23D224E477F00D7B6CF /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		6453375B2257748F0082CAFF /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
+		6410C23D224E477F00D7B6CF /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		6453375B2257748F0082CAFF /* ChatRoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomVC.swift; sourceTree = "<group>"; };
 		6453375D2257959B0082CAFF /* ChatRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomTableViewCell.swift; sourceTree = "<group>"; };
 		6453375F22579A1B0082CAFF /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		64BD0A3A224E530800A5F00A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		64BD0A3C224E6CD900A5F00A /* RoomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsViewController.swift; sourceTree = "<group>"; };
+		64BD0A3C224E6CD900A5F00A /* RoomsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsVC.swift; sourceTree = "<group>"; };
 		64BD0A3F224E86F400A5F00A /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		DF9A19767489B97D09BF0687 /* Pods-Elshaer Chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Elshaer Chat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Elshaer Chat/Pods-Elshaer Chat.debug.xcconfig"; sourceTree = "<group>"; };
+		E23C2EC1259C92C3003AD49B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				E2586617259C8CC700565AE7 /* Shared */,
+				E23C2EC0259C92AB003AD49B /* Utilities */,
 				E2586624259C8DBC00565AE7 /* Controller */,
 				E2586622259C8DAF00565AE7 /* View */,
 				64BD0A3E224E86BC00A5F00A /* Models */,
@@ -110,6 +113,14 @@
 				5EBFD19B72E84CF6B2BDB7DF /* Pods-Elshaer Chat.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E23C2EC0259C92AB003AD49B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E23C2EC1259C92C3003AD49B /* Constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		E2586617259C8CC700565AE7 /* Shared */ = {
@@ -149,7 +160,7 @@
 		E258661E259C8D9800565AE7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				6410C23D224E477F00D7B6CF /* CollectionViewCell.swift */,
+				6410C23D224E477F00D7B6CF /* MainCollectionViewCell.swift */,
 				6453375D2257959B0082CAFF /* ChatRoomTableViewCell.swift */,
 			);
 			path = Cells;
@@ -175,8 +186,8 @@
 			isa = PBXGroup;
 			children = (
 				6410C22D224E3F4E00D7B6CF /* MainVC.swift */,
-				64BD0A3C224E6CD900A5F00A /* RoomsViewController.swift */,
-				6453375B2257748F0082CAFF /* ChatRoomViewController.swift */,
+				64BD0A3C224E6CD900A5F00A /* RoomsVC.swift */,
+				6453375B2257748F0082CAFF /* ChatRoomVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -210,7 +221,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Mohamed Elshaer";
 				TargetAttributes = {
 					6410C227224E3F4D00D7B6CF = {
@@ -301,11 +312,12 @@
 				6453375E2257959B0082CAFF /* ChatRoomTableViewCell.swift in Sources */,
 				6410C22E224E3F4E00D7B6CF /* MainVC.swift in Sources */,
 				6410C22C224E3F4E00D7B6CF /* AppDelegate.swift in Sources */,
-				6410C23E224E477F00D7B6CF /* CollectionViewCell.swift in Sources */,
-				64BD0A3D224E6CD900A5F00A /* RoomsViewController.swift in Sources */,
+				6410C23E224E477F00D7B6CF /* MainCollectionViewCell.swift in Sources */,
+				64BD0A3D224E6CD900A5F00A /* RoomsVC.swift in Sources */,
 				6453376022579A1B0082CAFF /* Message.swift in Sources */,
 				64BD0A40224E86F400A5F00A /* Room.swift in Sources */,
-				6453375C2257748F0082CAFF /* ChatRoomViewController.swift in Sources */,
+				6453375C2257748F0082CAFF /* ChatRoomVC.swift in Sources */,
+				E23C2EC2259C92C3003AD49B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +369,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -418,6 +431,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

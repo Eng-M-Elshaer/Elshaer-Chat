@@ -30,20 +30,19 @@ class MainVC: UIViewController{
     }
     @objc func signUpBtnTapped(_ sender: UIButton){
         let indexPath = IndexPath(row: 1, section: 0)
-        let cell = self.collectionView.cellForItem(at: indexPath) as! CollectionViewCell
-        guard let emailAddress = cell.emailAddress.text,
-              let password = cell.password.text,
-              let username = cell.userName.text else {return}
+        let cell = self.collectionView.cellForItem(at: indexPath) as! MainCollectionViewCell
+        guard let emailAddress = cell.emailAddressTextField.text,
+              let password = cell.passwordTextField.text,
+              let username = cell.userNameTextField.text else {return}
         if emailAddress.isEmpty == true || password.isEmpty == true || username.isEmpty == true{
             self.displayErrorAlert(errorText: "Please Fil The Empty Field", type: "Error")
         } else {
             Auth.auth().createUser(withEmail: emailAddress, password: password) { (result, error) in
                 if error == nil {
-                    guard let userID = result?.user.uid,let userName = cell.userName.text else {
-                        return
-                    }
+                    guard let userID = result?.user.uid,
+                          let userName = cell.userNameTextField.text else {return}
                     let ref = Database.database().reference()
-                    let users = ref.child("users").child(userID)
+                    let users = ref.child(Childs.users).child(userID)
                     let dataArray:[String: Any] = ["username": userName]
                     users.setValue(dataArray)
                     self.dismiss(animated: true, completion: nil)
@@ -56,9 +55,9 @@ class MainVC: UIViewController{
     }
     @objc func loginBtnTapped(_ sender: UIButton){
         let indexPath = IndexPath(row: 0, section: 0)
-        let cell = self.collectionView.cellForItem(at: indexPath) as! CollectionViewCell
-        guard let emailAddress = cell.emailAddress.text,
-              let password = cell.password.text else {return}
+        let cell = self.collectionView.cellForItem(at: indexPath) as! MainCollectionViewCell
+        guard let emailAddress = cell.emailAddressTextField.text,
+              let password = cell.passwordTextField.text else {return}
         if emailAddress.isEmpty == true || password.isEmpty == true {
             self.displayErrorAlert(errorText: "Please Fil The Empty Field", type: "Error")
         } else {
@@ -80,20 +79,14 @@ extension MainVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollec
         return 2
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "formCell", for: indexPath) as! CollectionViewCell
+        let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: Cells.formCell, for: indexPath) as! MainCollectionViewCell
         if indexPath.row == 0 {
-            cell.userNameCon.isHidden = true
-            cell.actionButton.setTitle("Login", for: .normal)
-            cell.slideButton.setTitle("Sign Up 👉", for: .normal)
             cell.slideButton.addTarget(self, action: #selector(slideToSignUpBtnTapped(_:)), for: .touchUpInside)
         } else {
-            cell.userNameCon.isHidden = false
-            cell.actionButton.setTitle("Sign Up", for: .normal)
-            cell.slideButton.setTitle("Sign In 👈", for: .normal)
             cell.slideButton.addTarget(self, action: #selector(slideToLoginBtnTapped(_:)), for: .touchUpInside)
             cell.actionButton.addTarget(self, action: #selector(signUpBtnTapped(_:)), for: .touchUpInside)
-
         }
+        cell.configuration(indexPath: indexPath.row)
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
